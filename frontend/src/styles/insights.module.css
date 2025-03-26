@@ -1,0 +1,24 @@
+
+
+.table-container {
+  margin: auto;
+  width: 50%; 
+  min-width: 300px; /* You can adjust this value */
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+th, td {
+  text-align: center; /* Center align text horizontally */
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+

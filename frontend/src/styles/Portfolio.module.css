@@ -1,0 +1,48 @@
+.portfolioTitle {
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-weight: bolder;  
+}
+
+.noDataCard {
+    background-color: rgba(253,241,200,255);
+    border-color: #e1d5af;
+    border-radius: .25rem;
+    margin-top: 50px;
+}
+
+.portfolio {
+    min-width: 150px;
+    transition: box-shadow .2s ease-in-out;
+    margin: 0px;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.SummaryTop {
+    margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .SummaryTop {
+    padding-left: 0px;
+    left: -40px;
+  }
+}
+
+.portfolioNumber {
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .portfolioNumber {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-left: -20px;
+}
+}

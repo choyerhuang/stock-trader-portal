@@ -1,0 +1,97 @@
+.searchTitle {
+    position: relative;
+    top: 20px;
+    margin: 20px;
+    margin-top: 0px;
+    font-weight: 400;  
+}
+
+.customFormContainer{
+    /* background-color: transparent; */
+    margin: 20px;
+    
+    .customForm {
+        z-index: 100;
+        border: 0px  !important;
+        box-shadow: 0 0 0 3px rgba(39,41,179,255);
+        border-radius: 30px;
+
+    } 
+
+    .customInput { 
+        background-color: transparent;
+        border: 0px;
+        box-shadow: 0;
+        border-radius: 30px;
+    }
+
+    .customInput:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .customSearchIcon {
+        background-color: transparent;
+        border: 0px;
+        box-shadow: 0;
+    } 
+
+    .customCross {
+        margin-left: 15px;
+        margin-right: 5px;
+        width: 23px;
+        height:23px;
+    }
+}
+
+.errorCard {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: .25rem;
+    margin-top: 50px;
+}
+
+  @media (max-width: 768px) {
+    .errorCard {
+      font-size: 12px; 
+    }}
+
+.listBoxContainer {
+    position: absolute;
+    width: 30%;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  @media (min-width: 1800px) {
+    .listBoxContainer {
+      width: 25%; /* Increase width to 60% for screens 768px wide or less */
+    }
+  }
+  @media (max-width: 768px) {
+    .listBoxContainer {
+      width: 60%; /* Increase width to 60% for screens 768px wide or less */
+    }
+  }
+  
+  .listBoxItem {
+    background-color:white;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+
+  .listBoxItem:hover {
+    background-color:gray;
+  }
+  
+
+  

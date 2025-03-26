@@ -1,0 +1,25 @@
+.table {
+    width:50%;
+    margin:0 auto;
+    margin-top: 20px;
+}
+
+@media(max-width: 768px) {
+    .table {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+.insightHighCharts {
+    max-width: 630px;
+    padding-right:10px;
+}
+
+
+@media(max-width: 768px) {
+    .insightHighCharts {
+        max-width: 320px;
+    }
+}

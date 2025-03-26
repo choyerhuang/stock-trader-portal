@@ -1,0 +1,100 @@
+.newsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsGrid {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .newsGrid {
+        width: 100%;
+        margin-left: 5px;
+    }
+}
+
+
+.news {
+    height: 100px;
+    min-width: 150px;
+    transition: box-shadow .2s ease-in-out;
+    margin: 10px;
+    cursor: pointer;
+    background-color:  rgba(245, 245, 245, 1);
+}
+
+@media (max-width: 768px) {
+    .news {
+        margin-left: 20px;
+        height: 260px;
+        min-width: 150px;
+        transition: box-shadow .2s ease-in-out;
+        margin: 10px;
+        cursor: pointer;
+        background-color:  rgba(245, 245, 245, 1);
+    }
+}
+
+.news:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.cardBody {
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: "-15px";
+    mask-image: linear-gradient(to bottom, #000 84%, transparent);
+}
+
+.newsCardBody {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .newsCardBody {
+        position: relative; 
+        display: block;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cardBody {
+    white-space: normal;  
+    height: 20px;
+    margin-top: -50px;  
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.5;
+    mask-image: linear-gradient(to bottom, #000 84%, transparent);
+}
+}
+
+.cardText{
+    white-space: pre-line;
+}
+
+.newsImage {
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: -13px;
+}
+
+@media (max-width: 768px) {
+    .newsImage {
+        width: 240px;
+        height: 200px;
+        border-radius: 8px;
+        margin-right: 10px;
+        margin-top: 0px;
+        
+    }
+}

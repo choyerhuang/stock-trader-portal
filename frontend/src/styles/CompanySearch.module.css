@@ -1,0 +1,93 @@
+.ticker {
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .ticker {
+      font-size: 24px;
+    }
+  }
+
+
+.subticker {
+    font-size: 28px;
+}
+
+@media (max-width: 768px) {
+    .subticker {
+        width: 125px;
+        font-size: 21px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .exchange {
+        font-size: 10px;
+    }
+}
+
+.buySellButtons {
+    margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .buySellButtons {
+        margin-right: 5px;
+        padding: 5px 5px;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: -50px;
+        width: 70px;
+        height: 70px;
+        max-width: 70px;
+    }
+}
+
+.currentPrice {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .currentPrice {
+        margin-left: -50px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+.changeInPrice {
+    font-size: 22px;
+}
+
+
+@media (max-width: 768px) {
+    .changeInPrice {
+        margin-left: -50px;
+        font-size: 18px;
+    }
+}
+
+.priceTime {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .priceTime {
+        font-size: 14px;
+        margin-Top: 20px;
+        margin-left: -50px
+    }
+}

@@ -1,0 +1,50 @@
+.watchListTitle {
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-weight: bolder;  
+}
+
+.noDataCard {
+    background-color: rgba(253,241,200,255);
+    border-color: #e1d5af;
+    border-radius: .25rem;
+    margin-top: 50px;
+    height: 50px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .noDataCard {
+    background-color: rgba(253,241,200,255);
+    border-color: #e1d5af;
+    border-radius: .25rem;
+    display: flex;
+    margin-top: 20px;
+    font-size: 14px;
+}
+}
+
+.noDataText {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .noDataText {
+        width: 200px;
+        text-align: center;
+    }
+}
+
+
+.favorite {
+    height: 140px;
+    min-width: 150px;
+    transition: box-shadow .2s ease-in-out;
+    margin: 0px;
+    cursor: pointer;
+    border-radius: .25rem;
+}

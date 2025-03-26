@@ -1,0 +1,24 @@
+.responsive-margin-card {
+    margin-right: 170px; 
+}
+
+@media (max-width: 1300px) {
+    .responsive-margin-card {
+        margin-right: 50px; 
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .responsive-margin-card {
+        margin-right: 10px; 
+    }
+}
+
+
+@media (max-width: 767px) {
+    .responsive-margin-card {
+        margin-right: 0px; 
+    }
+}
