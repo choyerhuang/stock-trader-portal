@@ -1,16 +1,15 @@
+// server.ts
+// Starts the backend server (logic stripped for public release)
+
 import app from "./app";
-import env from "./util/validateEnv";
-import mongoose from "mongoose";
-import path from 'path';
+import "dotenv/config";
+import env from "./env"; // validates required env variables
 
-const port = env.PORT;
+// 🔒 Runtime validation and launch logic omitted for academic integrity.
+// This section typically sets up the server port and logs environment info.
 
-mongoose.connect(env.MONGO_CONNECTION_STRING)
-    .then(()=> {
-        console.log("Mongoose connected");
-        app.listen(port, () => {
-            console.log("Server running on Port: " + port);
-        });     
-    })
-    .catch(console.error);
+const PORT = env.PORT || 8080;
 
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on http://localhost:${PORT}`);
+});

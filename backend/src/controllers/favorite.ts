@@ -1,67 +1,63 @@
+ // favorite.ts
+// Controller for managing user's favorite stocks
+// 🔒 Internal logic removed to comply with academic integrity policies
+
 import { RequestHandler } from "express";
 import mongoose from "mongoose";
 import FavoriteModel from "../models/favorite";
 import createHttpError from "http-errors";
 
-export const getFavorites: RequestHandler = async (req, res, next) => {
-    try {
-        const favorites = await FavoriteModel.find().exec();
-        res.status(200).json(favorites);
-    } catch (error) {
-        next(error);
-    }
-};
-
-export const getFavorite: RequestHandler = async (req, res, next) => {
-    const favoriteId = req.params.favoriteId;
-    
-    try {
-        if(!mongoose.isValidObjectId(favoriteId)){
-            throw createHttpError(400, "Invalid favorite id.");
-        }
-
-        const favorite = await FavoriteModel.findById(favoriteId).exec();
-
-        if (!favorite) {
-            throw createHttpError(404, "Favorite not found.");
-        }
-
-        res.status(200).json(favorite);
-    } catch (error) {
-        next(error);
-    }
-};
-
 interface CreateFavoriteBody {
-    companyStick?: string,
+  companyStick?: string;
+}
+
+// Get all favorite stock entries
+export const getFavorites: RequestHandler = async (req, res, next) => {
+  try {
+    // 🔒 Logic omitted: typically retrieves all favorite stock entries from DB
+    res.status(200).json({ message: "Demo: get all favorites (logic omitted)." });
+  } catch (error) {
+    next(error);
+  }
 };
 
-export const createFavorites: RequestHandler<unknown, unknown, CreateFavoriteBody, unknown> = async (req, res, next) => {
-    const stick = req.body.companyStick;
+// Get a single favorite stock by ID
+export const getFavorite: RequestHandler = async (req, res, next) => {
+  const favoriteId = req.params.favoriteId;
 
-    try {
-        if (!stick) {
-            throw createHttpError(400, "company's stick is required.");
-        }
-
-        const newFavorite = await FavoriteModel.create({
-            companyStick: stick,
-        });
-
-        res.status(201).json(newFavorite);
-    } catch (error) {
-        next(error);
-    }
+  try {
+    // 🔒 Logic omitted: validate ID, fetch favorite from DB
+    res.status(200).json({ message: `Demo: get favorite ${favoriteId}` });
+  } catch (error) {
+    next(error);
+  }
 };
 
-export const deleteFavorites: RequestHandler = async(req, res, next) => {
-    const stick = req.params.companyStick;
+// Create a new favorite stock
+export const createFavorites: RequestHandler<
+  unknown,
+  unknown,
+  CreateFavoriteBody,
+  unknown
+> = async (req, res, next) => {
+  const stick = req.body.companyStick;
 
-    try {
-        const result = await FavoriteModel.findOneAndDelete({ companyStick: stick });
+  try {
+    // 🔒 Logic omitted: validate input and save favorite
+    res.status(201).json({ message: "Demo: create new favorite (logic omitted)." });
+  } catch (error) {
+    next(error);
+  }
+};
 
-        res.sendStatus(204);
-    } catch (error) {
-        next(error);
-    }
+// Delete a favorite stock by ticker
+export const deleteFavorites: RequestHandler = async (req, res, next) => {
+  const stick = req.params.companyStick;
+
+  try {
+    // 🔒 Logic omitted: find and delete favorite by companyStick
+    res.sendStatus(204);
+  } catch (error) {
+    next(error);
+  }
 };

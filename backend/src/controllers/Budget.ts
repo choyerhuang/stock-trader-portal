@@ -1,107 +1,88 @@
+// Budget.ts
+// Controller for handling budget-related operations
+// 🔒 Internal logic removed to comply with academic integrity policies
+
 import { RequestHandler } from "express";
 import mongoose from "mongoose";
 import BudgetModel from "../models/Budget";
 import createHttpError from "http-errors";
 
-export const getBudget: RequestHandler = async(req, res, next) => {
-    try {
-        const budgets = await BudgetModel.find().exec();
-        res.status(200).json(budgets);
-    } catch (error) {
-        next(error);
-    }
-};
-
 interface UpdateBudget {
-    budget?: number;
+  budget?: number;
 }
 
-export const initialBudget: RequestHandler<UpdateBudget, unknown, UpdateBudget, unknown>  = async(req, res, next) => {
-    const budget = req.body.budget;
-
-    try {
-        if(!budget){
-            throw createHttpError(400, "The budget is needed.");
-        }
-
-        const newBudget = await BudgetModel.create({
-            budget: budget,
-        });
-
-        res.status(201).json(newBudget);
-
-    } catch (error) {
-        next(error);
-    }
-
+// Fetch the current budget record
+export const getBudget: RequestHandler = async (req, res, next) => {
+  try {
+    // 🔒 Logic omitted: typically fetches budget from DB
+    res.status(200).json({ message: "Demo: get budget (logic omitted)." });
+  } catch (error) {
+    next(error);
+  }
 };
 
-export const addBudget: RequestHandler<UpdateBudget, unknown, UpdateBudget, unknown>  = async(req, res, next) => {
+// Create initial budget value
+export const initialBudget: RequestHandler<
+  UpdateBudget,
+  unknown,
+  UpdateBudget,
+  unknown
+> = async (req, res, next) => {
+  try {
     const budget = req.body.budget;
 
-    try {
-        if (!budget) {
-            throw createHttpError(400, "The budget is needed.");
-        }
-
-        const existingBudget = await BudgetModel.findOne();
-
-        if (!existingBudget) {
-            throw createHttpError(404, "Budget not found.");
-        }
-
-        existingBudget.budget += budget;
-
-        const updatedBudget = await existingBudget.save();
-
-        res.status(200).json(updatedBudget);
-
-    } catch (error) {
-        next(error);
-    }
+    // 🔒 Logic omitted: would validate and store a new budget entry
+    res.status(201).json({ message: "Demo: create initial budget." });
+  } catch (error) {
+    next(error);
+  }
 };
 
-export const minusBudget: RequestHandler<UpdateBudget, unknown, UpdateBudget, unknown>  = async(req, res, next) => {
+// Add to existing budget
+export const addBudget: RequestHandler<
+  UpdateBudget,
+  unknown,
+  UpdateBudget,
+  unknown
+> = async (req, res, next) => {
+  try {
     const budget = req.body.budget;
 
-    try {
-        if (!budget) {
-            throw createHttpError(400, "The budget is needed.");
-        }
-
-        const existingBudget = await BudgetModel.findOne();
-
-        if (!existingBudget) {
-            throw createHttpError(404, "Budget not found.");
-        }
-
-        existingBudget.budget -= budget;
-
-        const updatedBudget = await existingBudget.save();
-
-        res.status(200).json(updatedBudget);
-        
-    } catch (error) {
-        next(error);
-    }
+    // 🔒 Logic omitted: would validate, find existing budget, and add value
+    res.status(200).json({ message: "Demo: add to budget." });
+  } catch (error) {
+    next(error);
+  }
 };
 
-export const refreshBudget: RequestHandler<UpdateBudget, unknown, UpdateBudget, unknown>  = async(req, res, next) => {
+// Subtract from existing budget
+export const minusBudget: RequestHandler<
+  UpdateBudget,
+  unknown,
+  UpdateBudget,
+  unknown
+> = async (req, res, next) => {
+  try {
+    const budget = req.body.budget;
 
-    try {
-        const existingBudget = await BudgetModel.findOne();
+    // 🔒 Logic omitted: would validate, find existing budget, and subtract value
+    res.status(200).json({ message: "Demo: subtract from budget." });
+  } catch (error) {
+    next(error);
+  }
+};
 
-        if (!existingBudget) {
-            throw createHttpError(404, "Budget not found.");
-        }
-
-        existingBudget.budget = 25000;
-
-        const updatedBudget = await existingBudget.save();
-
-        res.status(200).json(updatedBudget);
-        
-    } catch (error) {
-        next(error);
-    }
+// Reset budget to default (e.g. $25,000)
+export const refreshBudget: RequestHandler<
+  UpdateBudget,
+  unknown,
+  UpdateBudget,
+  unknown
+> = async (req, res, next) => {
+  try {
+    // 🔒 Logic omitted: would reset budget to default value
+    res.status(200).json({ message: "Demo: reset budget to default." });
+  } catch (error) {
+    next(error);
+  }
 };
