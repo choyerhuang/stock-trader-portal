@@ -4,6 +4,26 @@ A full-stack stock trading dashboard built with **React.js**, **Node.js**, and *
 
 > ⚠️ **Note**: Due to academic integrity policies, this repository only contains partial implementation and did not provide the live demo. Sensitive logic and API keys are excluded. Please contact the author for further information (excluding currently enrolled students).
 
+
+---
+
+## 🎥 Demo
+
+[![Watch the demo]()]()
+
+---
+
+## 🖼️ Screenshots
+
+| Feature | Preview |
+|--------|--------|
+| **Search Page with Autocomplete** | ![Search Autocomplete](./screenshots/search-autocomplete.png) |
+| **Stock Summary + News Tab** | ![Stock Summary](./screenshots/stock-summary.png) |
+| **Interactive Chart View** | ![Chart](./screenshots/chart-view.png) |
+| **Portfolio with Buy/Sell Modal** | ![Portfolio](./screenshots/portfolio.png) |
+| **Watchlist with Realtime Data** | ![Watchlist](./screenshots/watchlist.png) |
+
+
 ---
 
 ## Tech Stack
