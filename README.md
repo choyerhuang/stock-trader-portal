@@ -13,8 +13,6 @@ A full-stack stock trading dashboard built with **React.js**, **Node.js**, and *
 
 ---
 
-## 🖼️ Screenshots
-
 ## 🖼️ Feature Preview (Desktop vs Mobile)
 
 ### 🔍 Search Page
