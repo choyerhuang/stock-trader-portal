@@ -15,13 +15,45 @@ A full-stack stock trading dashboard built with **React.js**, **Node.js**, and *
 
 ## 🖼️ Screenshots
 
-| Feature | Preview |
+## 🖼️ Feature Preview (Desktop vs Mobile)
+
+### 🔍 Search Page
+
+| Desktop | Mobile |
 |--------|--------|
-| **Search Page with Autocomplete** | ![Search Autocomplete](./screenshots/search-autocomplete.png) |
-| **Stock Summary + News Tab** | ![Stock Summary](./screenshots/stock-summary.png) |
-| **Interactive Chart View** | ![Chart](./screenshots/chart-view.png) |
-| **Portfolio with Buy/Sell Modal** | ![Portfolio](./screenshots/portfolio.png) |
-| **Watchlist with Realtime Data** | ![Watchlist](./screenshots/watchlist.png) |
+| ![](./screenshots/search-desktop.png) | ![](./screenshots/search-mobile.png) |
+
+---
+
+### 📊 Chart View
+
+| Desktop | Mobile |
+|--------|--------|
+| ![](./screenshots/chart-desktop.png) | ![](./screenshots/chart-mobile.png) |
+
+---
+
+### 📰 News Section
+
+| Desktop | Mobile |
+|--------|--------|
+| ![](./screenshots/news-desktop.png) | ![](./screenshots/news-mobile.png) |
+
+---
+
+### 💼 Portfolio Tab
+
+| Desktop | Mobile |
+|--------|--------|
+| ![](./screenshots/portfolio-desktop.png) | ![](./screenshots/portfolio-mobile.png) |
+
+---
+
+### ⭐ Watchlist
+
+| Desktop | Mobile |
+|--------|--------|
+| ![](./screenshots/watchlist-desktop.png) | ![](./screenshots/watchlist-mobile.png)
 
 
 ---
